@@ -1,0 +1,41 @@
+que-
+Write SQL Query for Inner Join, Left Outer Join, Right Outer Join and Full Outer Join? Please post output below every query.
+Scenario1 : Here is sample data
+table1
+col1
+1
+2
+3
+5 
+table2
+col2
+1
+2
+4
+given that Col1 has referential integrity with col2.
+
+solution----
+Inner join-----------------------------------------------------------------------
+SELECT table1.col1,table2.col2
+FROM table1
+INNER JOIN table2
+ON table1.col1 = table2.col2;
+
+Left join-------------------------------------------------------------------------
+SELECT table1.col1,table2.col2
+FROM table1
+LEFT JOIN table2
+ON table1.col1 = table2.col2;
+
+Right outer join------------------------------------------------------------------
+SELECT table1.col1,table2.col2
+FROM table1
+right outer JOIN table2
+ON table1.col1 = table2.col2;
+
+Full outer join-------------------------------------------------------------------
+SELECT table1.col1,table2.col2
+FROM table1
+full outer JOIN table2
+ON table1.col1 = table2.col2;
+
