@@ -1,0 +1,22 @@
+SQL Assignment 16th Jan :  
+Get second highest salary department wise using subquery and Window Function?
+Employee
+Emp deptno salary
+A    10     1000
+B    10     2000
+C    10     3000
+D    20     7000
+E    20     9000
+F    20     8000
+G    30     17000
+H    30     15000
+I    30     30000
+----------------------------------------
+
+query- 
+select emp, deptno, salary from ( select emp, deptno, salary, dense_rank() over(partition by deptno order by salary desc) as rn from employee) as temp where rn = 2;
+
+output---------
+B    10     2000
+F    20     8000
+G    30     17000
