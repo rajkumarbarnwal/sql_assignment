@@ -1,0 +1,5 @@
+assignment 14th feb-
+select customer_name, (case when sum(status = 'delivered') = count(*) then 'completed' 
+when sum(status = 'delivered')>0 then 'in progress'
+when sum(status = 'submitted')>0 then 'awaiting progress'
+else 'awaiting submission' end) as status from customer_order group by customer_name;
