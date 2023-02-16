@@ -1,0 +1,14 @@
+Linux Assignment 01:
+Linux command to get duplicate word count in a file. Write the output to new file.
+
+touch raj.txt // used to create file
+vi raj.txt // to open editor for file
+cat raj.txt //to view file
+touch demo.txt
+sort raj.txt | uniq -c | grep -v '^ * 1' > demo.txt // Linux command to get duplicate word count in a file.
+
+//uniq - c is used to filter out duplicate lines in a file
+//sort is used to get the value in a increment manner
+//grep -v returns the value which are not matching the search value
+
+
